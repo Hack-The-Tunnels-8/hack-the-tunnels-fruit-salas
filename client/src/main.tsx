@@ -45,7 +45,10 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    element: <div>404</div>,
+    element: <div><center><h1>YOU HAVE BEEN CAPYBARRED</h1></center>
+      <div></div>
+      <center><img src="src/CAPABARYA.gif" alt="capybara!"/></center>
+    </div>,
   },
 ]);
 
