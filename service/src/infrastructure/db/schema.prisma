@@ -10,15 +10,22 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Review {
+  id        Int      @id @default(autoincrement())
+  review    String   @default("Test")
+  rating    Int      @default(0)
+  products  Product[]
+}
+
 model Product {
   id          Int        @id @default(autoincrement())
   title       String
   description String?
   price       Float
   imageUrl    String?
+  review Review @relation(fields: [reviewId], references: [id])
+  reviewId    Int @default(0)
   lineItems   LineItem[]
-  review      String @default("Test")
-  rating      Int @default(0)
 }
 
 model Order {
