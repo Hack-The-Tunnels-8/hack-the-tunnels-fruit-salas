@@ -1,14 +1,14 @@
 .product-preview-card {
   &__title {
     font-style: bold;
-    font-family:Arial;
-    color: rgb(61, 32, 32);
+    
+    font-weight: 900;
+    color: rgb(6, 76, 6);
   }
 
   &__description {
-    font-style: bold;
-    color: rgb(107, 59, 59);
-    font-family:Arial;
+    font-weight: 900;
+    color: blue;
   }
 
   &__image {

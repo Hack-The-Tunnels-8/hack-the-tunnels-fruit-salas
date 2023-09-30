@@ -8,10 +8,15 @@ function Login() {
   const [message, setMessage] = useState(null);
   const { loggedIn, login } = useAccountContext();
   const navigate = useNavigate();
+  const [email, setEmail] = useState("")// const email = document.getElementById("email").value;
+  //const password = document.getElementById("password").value;
+
+  //console.log(email,password);
 
   const attemptLogin = async () => {
     try {
-      const message = await login("admin@email.com", "password");
+      //const message = await login(email, password);
+      const message = await login(email, "password");
       setMessage(message);
     } catch (error) {
       console.log(error);
@@ -31,6 +36,21 @@ function Login() {
         <button onClick={() => attemptLogin()}>
           Login (as user set in code)
         </button>
+
+        <div>
+        <label htmlFor="email">Email </label> 
+        <input type="text" id="email" name="email" onChange={(e) => setEmail(e.target.value)}/>
+        </div>
+
+        <div>
+        <label htmlFor="email">Password </label> 
+        <input type="text" id="password" name="password"/>
+        </div>
+      
+        <button onClick = {() => attemptLogin()}> 
+          Login!
+        </button>
+
         {message && <p>{message}</p>}
       </div>
     </Page>
