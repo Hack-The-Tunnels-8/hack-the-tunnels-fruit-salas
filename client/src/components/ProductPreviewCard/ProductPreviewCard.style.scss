@@ -1,4 +1,13 @@
 .product-preview-card {
+
+  @keyframes bgcolour {
+    from {background-color:#adc4adfe;}
+    to {background-color: orange;}
+  }
+
+  background-color: #adc4adfe;
+  animation: bgcolour 2s;
+  
   &__title {
     font-style: bold;
     
