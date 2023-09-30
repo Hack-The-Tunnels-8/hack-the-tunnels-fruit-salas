@@ -1,6 +1,7 @@
 .product-preview-card {
   &__title {
     font-style: bold;
+    
     font-weight: 900;
     color: rgb(6, 76, 6);
   }
@@ -11,6 +12,6 @@
   }
 
   &__image {
-    width: 10rem;
+    width: 20rem;
   }
 }
