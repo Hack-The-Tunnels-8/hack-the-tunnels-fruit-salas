@@ -23,6 +23,7 @@ model Product {
   description String?
   price       Float
   imageUrl    String?
+  delete      Boolean @default(false)
   review Review @relation(fields: [reviewId], references: [id])
   reviewId    Int @default(0)
   lineItems   LineItem[]
