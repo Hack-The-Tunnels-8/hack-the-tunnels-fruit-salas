@@ -51,3 +51,11 @@ model Account {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+model Review {
+
+  id          Int @id @default(autoincrement())
+  review      String @default("Test")
+  rating      Int @default(0)
+
+}
