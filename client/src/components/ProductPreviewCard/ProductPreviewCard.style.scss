@@ -1,10 +1,12 @@
 .product-preview-card {
   &__title {
     font-style: bold;
-    color: green;
+    font-weight: 900;
+    color: rgb(6, 76, 6);
   }
 
   &__description {
+    font-weight: 900;
     color: blue;
   }
 
